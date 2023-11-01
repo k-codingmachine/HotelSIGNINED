@@ -1,0 +1,143 @@
+
+h2, h5 {
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 0; 
+}
+
+
+h5 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.info-title{
+	 text-align: center;
+	 font-size: 45px;
+	 margin-top: 250px;
+ }
+ 
+.col-box {
+	margin:0 auto;
+	width:720px;
+	margin-bottom: 10px;
+	margin-top: 30px;
+	
+	
+}
+.center{
+	display:flex;
+	align-items: center;
+	justify-content:center;
+}
+.input-title {
+	font-size: 20px;
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+.reservationBox {
+    color: #333;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%; 
+    box-sizing: border-box;
+    height:50px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.inquiry-hr{
+	margin: 40px 0px;
+}
+.submitButton{
+	background-color: #ad9e87;
+	width: 360px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    border: 0;
+    border-radius: 0;
+	margin-top: 80px;
+	text-align: center;
+	margin:0 auto;
+	display: block;
+	cursor: pointer;
+}
+.submitButton:hover { 
+    background: #685f51; 
+}
+.alert-message{
+	margin-bottom: 20px;
+	color: red;
+}
+label {
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    display: inline-block;
+    max-width: 100%;
+    cursor: default;
+    box-sizing: border-box;
+}
+body{
+	overflow: auto
+
+}
+.txt-area{
+    font-size:22px;
+    padding: 30px;
+    border-bottom: 1px solid #dcdcdc;
+	float:right;
+	margin-top: 135px;
+	margin-right: 50px;
+}
+li{
+	margin-bottom: 40px;
+}
+.type{
+	text-align: left;
+	
+}
+.info{
+	float:right;
+}
+.totalprice{
+	text-align: right;
+	margin-bottom: 50px;
+	margin-top: 30px;
+	margin-right: 50px;
+	border-bottom: 1px solid #dcdcdc;
+	height: 50px;
+	
+}
+.total-price{
+	text-align: right;
+	font-size: 30px;
+   
+}
+.totalpricefont{
+	font-size: 50px;
+	text-align: left;
+}
+.total-number{
+	margin-left: 300px;
+    font-size: 26px;
+}
+.reservation-title{
+	font-size: 22px;
+	margin-top: 100px;
+	text-align: center;
+}
+.img-area{
+	width: 30%;  
+}
+.reservation-room-info{
+	text-align: center;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+}

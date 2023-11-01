@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; font-family: 'Open Sans Bold', sans-serif; line-height: 1.2;color: #333; letter-spacing: -1px; box-sizing: border-box;}
+
+a {text-decoration: none; color:#000;}
+
+ul,li,ol {list-style: none; margin:0; padding:0;}
+
+#wrap {width:auto; height:auto; position:relative;}
+
+/* 헤더 => 예약, 조회, QnA */
+.header {height:85px; width:100%; min-height:85px; margin:0 auto;background-color: rgba(255,255,255,.93); position:fixed; top:0; z-index:100; border-bottom:1px solid #dcdcdc;}
+.header > a {display: inline-block; width:200px; height:100%;}
+.header > a > img {width:100%; height:100%; margin-left:100px;}
+.header > nav {float:right; width:65%; height:100%;}
+.header > nav > ul {width:100%;}
+.header > nav > ul li {width:200px; height:100%; float:left; margin:0 10px; line-height: 80px; position:relative;}
+.header > nav > ul li a {font-size:17px; padding:20px 14px; color:#333;}
+.header > nav > ul li:first-child::before {content:""; position: absolute; left:-5px; top:30px; width:16px; height:16px; background:url("../search.png") no-repeat left -1px;}
+
+/* 슬라이더 */
+.slideWrap {width:100%; height:920px; overflow: hidden; position: absolute; top:0; left:0; height:920px;}
+.slider {width:6000px;}
+.slider img {width:2000px; height:100%; float:left;}
+
+/* 호텔 방 검색  */
+.sertchWrap {background-color:rgba(140,139,137,.97); position: absolute; top:85px; left:0; z-index:10; width:100%; height:113px;}
+.hotelSertch { height:100%; padding:26px 0 22px; box-sizing: border-box;  max-width: 1696px; margin:0 auto;}
+.hotelSertch > form {padding:0 80px;  display: flex; position:relative;}
+
+/* 호텔 이름 */
+.hotelName {padding-left: 25px; position:relative; width:355px;}
+.hotelName::after {display: block; position:absolute; top:0; right:0; width:1px; height:60px; background-color: #fff; content:""; opacity: .5;}
+.hotelName > label {font-size:14px; color:#fff; vertical-align: top; font-weight:500;}
+.input {position: relative; margin:3px 20px 0 0;}
+.input > input {position:relative; width:100%; font-size:18px; color:#fff; background: transparent; background-size:11px auto; line-height:34px; border:0; font-weight:500; outline: none;}
+
+/* 달력 띄우기 a태크 */
+.date_anchor {position: absolute; top:0; left:0; width:100%; height:100%;}
+
+/* 호텔 체크인 체크아웃 */
+.hotelCheckinAndCheckout {position: relative; font-size: 0; text-align: center; width:420px;}
+.hotelCheckinAndCheckout::after {display: block; position:absolute; top:0; right:0; width:1px; height:60px; background-color: #fff; content:""; opacity: .5;}
+.date_col {padding:0 4px; display: inline-block; position:relative; vertical-align: top; text-align: left; display: inline-block; color:#fff;}
+.date_stay {width:70px; padding-top:30px; font-size:17px; text-align: center; display: inline-block; color:#fff;}
+.night {color:#fff;}
+
+.date_title {display: block; margin-bottom:13px; font-weight:400; font-size:14px; color:#fff;}
+
+.date_day {display:inline-block; font-size:18px; color:#fff; letter-spacing: 0;}
+
+.date_month {display: inline-block; margin-left:3px; font-size:17px; color:#fff; vertical-align: 1px;}
+
+/* 호텔 객실수 + 성인 + 어린이 */
+.sertchPerson {text-align: center; width:255px; position:relative;}
+.sertchPerson::after {display: block; position:absolute; top:0; right:0; width:1px; height:60px; background-color: #fff; content:""; opacity: .5;}
+.person_col {vertical-align: top; float:left; height:45px; margin-left:40px;}
+
+.person_text {display: inline-block; color:#fff; font-size:14px; line-height:16px; }
+
+.person_num {display: block; margin-top:13px; font-size:18px; color:#fff;}
+
+/* 검색버튼 */
+
+.item_edit {width:263px; padding-right:50px; margin-left:70px;}
+.sertchButton {width:100%; min-height: 65px; margin-left:15px; padding:0 30px; color:#fff; border:2px solid #fff; cursor: pointer; font-size:18px; transition-timing-function: ease-out;
+    transition-duration: .2s;
+    transition-property: border-color,background-color,color,opacity; background:rgba(140,139,137,.97); color:#fff;}
+.sertchButton:hover {background: #fff; color: #998465;}
+
+/* 데이터 검색 달력 */
+.dateInput {opacity: 0; top:40px; position:absolute; z-index:100; left:200px; width:1000px; text-align: left; background-color: #fff; border-radius: 10px; box-shadow: 0 15px 60px 0 rgba(0,0,0,0.15); overflow: hidden; outline-offset: 2px; min-height: 343px;}
+.dateInput div {float:left;}
+.datePerson {margin:40px 0 20px 60px;}
+.datePerson input:nth-child(2) {text-align: center;}
+.datePerson input:nth-child(5) {text-align: center;}
+.amounts {text-align: center}
+/* 달력 구현했다 시....... */
+.datepicker {margin:40px 0 20px 30px;}

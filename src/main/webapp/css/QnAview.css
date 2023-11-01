@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+h1,h3 {font-weight:500;}
+
+/* QnA에서는 검색기능이 눌러야보인다. */
+.sertchWrap {background-color:rgba(140,139,137,.97); position: absolute; top:85px; left:0; z-index:10; width:100%; height:113px; display:none;}
+
+.QnAform {margin:150px auto 0; width:720px;}
+.QnAform > h3 {font-size:26px; color:#333; margin-bottom:10px; text-align: center; position:relative;}
+.QnAform > h3 > span {font-size:16px; color:#ef6600; position:absolute; top:0; right:0;}
+
+.row {padding-bottom:20px; font-size:16px; text-align: left;}
+.row > label {font-size:18px; word-break: normal; font-weight:bold; display:inline-block; padding-bottom:10px;}
+
+.selectWrap {height:44px; position:relative; vertical-align: top;}
+.selectWrap > select {padding:0 20px; width:100%; height:100%; border:0; outline: none; font-size:16px; background-color:#f5f5f5;}
+.selectWrap > select option {height:40px; font-size:16px;}
+
+.QnAtextarea {width:100%; min-height: 160px; padding:10px 15px; vertical-align: top; background-color:#f5f5f5; border:1px solid #f5f5f5; resize: none;}
+
+/* 고객 정보 */
+.title_line {margin:54px 0px; padding-top:75px; border-top:1px solid #e6e6e6; text-align: center;}
+.title_line > h3 {color:#333; font-size:26px; margin-bottom:10px;}
+
+.custInfo input {padding:0 20px; height:44px; font-size:16px; line-height:44px; background-color: #f5f5f5; width:100%; border:1px solid #f5f5f5; outline: none; }
+
+/*  확인 취소 버튼 */
+.formSubmit {margin:60px 0; text-align: center;}
+
+.button_item {padding-right:1px; display: inline-block; width:auto; vertical-align: top;}
+.button_item button {width:auto; min-width:160px; padding:0 20px; font-size:18px; line-height:50px;  transition: 0.7s;}
+.button_item:first-child button {color:#fff; background-color: #ad9e87; border:0;}
+.button_item:first-child button:hover {background-color:#685f51;}
+.button_item:nth-child(2) button {color:#fff; background-color:gray; border:0;}
+.button_item:nth-child(2) button:hover {background-color:#333;}
+.button_item:last-child button {color:#fff; background-color:#555; border:0;}
+.button_item:last-child button:hover {background-color:#000;}
+
+
+
+
