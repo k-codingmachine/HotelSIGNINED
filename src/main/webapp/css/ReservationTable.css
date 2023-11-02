@@ -1,0 +1,50 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 150px;
+}
+
+th,
+td {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+th {
+	background-color: #ad9e87;
+	;
+}
+
+.cancleButton {
+	background-color: #ad9e87;
+	width: 360px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 50px;
+	border: 0;
+	border-radius: 0;
+	margin-top: 200px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+}
+
+.cancleButton:hover {
+	background: #685f51;
+}
+
+body {
+	margin-top: 300px;
+}
+
+.info-title {
+	text-align: center;
+	font-size: 45px;
+	margin-top: 250px;
+}
+
+.divbutton {
+	margin-top: 200px;
+}

@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+if (window.name == 'replyView') {
+	window.opener.parent.location.href = "HotelServlet?command=QnA_reply_view&num=${param.num}";
+}
+window.close();
+</script>
+</body>
+</html>

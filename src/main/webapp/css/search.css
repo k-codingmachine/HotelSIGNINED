@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+* {margin:0; padding:0; font-family: 'Open Sans Bold', sans-serif; line-height: 1.2;color: #333; letter-spacing: -1px; box-sizing: border-box;}
+
+a {text-decoration: none; color:#000;}
+
+ul,li,ol {list-style: none; margin:0; padding:0;}
+
+#wrap {width:auto; height:auto; position:relative;}
+
+/* 헤더 => 예약, 조회, QnA */
+.header {height:85px; width:100%; min-height:85px; margin:0 auto;background-color: rgb(255, 255, 255); position:fixed; top:0; z-index:102;}
+.header > a {display: inline-block; width:200px; height:100%;}
+.header > a > img {width:100%; height:100%; margin-left:100px;}
+.header > nav {float:right; width:65%; height:100%;}
+.header > nav > ul {width:100%;}
+.header > nav > ul li {width:200px; height:100%; float:left; margin:0 10px; line-height: 80px; position:relative;}
+.header > nav > ul li a {font-size:17px; padding:20px 14px; color:#333;}
+.header > nav > ul li:first-child::before {content:""; position: absolute; left:-5px; top:30px; width:16px; height:16px; background:url("../image/search.png") no-repeat left -1px;}
+
+/* 호텔 방 검색  */
+.sertchWrap {background-color:rgb(243, 242, 239); width:100%; height:113px; position:absolute; top:85px; left:0;}
+.hotelSertch { height:100%; padding:26px 0 22px; box-sizing: border-box;  max-width: 1696px; margin:0 auto;}
+.hotelSertch > form {padding:0 80px;  display: flex; position:relative;}
+
+/* 호텔 이름 */
+.hotelName {padding-left: 25px; position:relative; width:355px;}
+.hotelName::after {display: block; position:absolute; top:0; right:0; width:1px; height:60px; background-color: rgb(0, 0, 0); content:""; opacity: .5;}
+.hotelName > label {font-size:14px; color:rgb(0, 0, 0); vertical-align: top; font-weight:500;}
+.input {position: relative; margin:3px 20px 0 0;}
+.input > input {position:relative; width:100%; font-size:18px; color:rgb(0, 0, 0); background: transparent; background-size:11px auto; line-height:34px; border:0; font-weight:500; outline: none;}
+
+/* 달력 띄우기 a태크 */
+.date_anchor {position: absolute; top:0; left:0; width:100%; height:100%;}
+
+/* 호텔 체크인 체크아웃 */
+.hotelCheckinAndCheckout {position: relative; font-size: 0; text-align: center; width:420px;}
+.hotelCheckinAndCheckout::after {display: block; position:absolute; top:0; right:0; width:1px; height:60px; background-color: rgb(0, 0, 0); content:""; opacity: .5;}
+.date_col {padding:0 4px; display: inline-block; position:relative; vertical-align: top; text-align: left; display: inline-block; color:rgb(0, 0, 0);}
+.date_stay {width:70px; padding-top:30px; font-size:17px; text-align: center; display: inline-block; color:rgb(0, 0, 0);}
+.night {color:rgb(0, 0, 0);}
+
+.date_title {display: block; margin-bottom:13px; font-weight:400; font-size:14px; color:rgb(0, 0, 0);}
+
+.date_day {display:inline-block; font-size:18px; color:rgb(0, 0, 0); letter-spacing: 0;}
+
+.date_month {display: inline-block; margin-left:3px; font-size:17px; color:rgb(0, 0, 0); vertical-align: 1px;}
+
+/* 호텔 객실수 + 성인 + 어린이 */
+.sertchPerson {text-align: center; width:255px; position:relative;}
+.sertchPerson::after {display: block; position:absolute; top:0; right:0; width:1px; height:60px; background-color: rgb(0, 0, 0); content:""; opacity: .5;}
+.person_col {vertical-align: top; float:left; height:45px; margin-left:40px;}
+
+.person_text {display: inline-block; color:rgb(0, 0, 0); font-size:14px; line-height:16px; }
+
+.person_num {display: block; margin-top:13px; font-size:18px; color:rgb(0, 0, 0);}
+
+/* 검색버튼 */
+
+.item_edit {width:263px; padding-right:50px; margin-left:70px;}
+.sertchButton {width:45%; min-height: 50px; margin-left:15px; padding:0 30px; color:rgb(255, 255, 255); border:1px solid rgb(170, 159, 149); cursor: pointer; font-size:14px; transition-timing-function: ease-out;
+    transition-duration: .2s;
+    transition-property: border-color,background-color,color,opacity; background:rgb(121, 96, 79); color:rgb(255, 255, 255);}
+.sertchButton:hover {background: rgb(128, 128, 128); color: rgb(255, 255, 255);}
+
+/* 데이터 검색 달력 */
+.dateInput {display:none ; top:40px; position:absolute; z-index:100; left:200px; width:1000px; text-align: left; background-color: #fff; border-radius: 10px;overflow: hidden; outline-offset: 2px; min-height: 343px;}
+.dateInput > div { position:relative; z-index:100; float:left;}
+
+.amounts {text-align: center;}
+
+
+
+/* 달력 구현  */
+.datepicker {margin:40px 0 20px 30px; border-right:1px solid #eee; box-shadow: none;}
+
+.datePerson {margin:60px 0 20px 30px;}
+.datePerson > span {display:inline-block; min-width:51px; font-size:14px; color:#000; line-height:34px;}
+
+.datePersonBtn {display:inline-block; min-width:134px; vertical-align: top; padding:0 33px; position:relative;}
+
+.datePersonBtn > span {position:relative; z-index:2; width:100%; border:1px solid #bbb; background-color:#fff; text-align: center; pointer-events: none; height:34px; line-height:33px; font-size:14px; display: block;}
+
+.personNum {overflow: hidden; position:absolute; width:1px; height:1px; opacity: 0;}
+
+.personPlus {width:34px; height:34px; position:absolute; top:0; left:0; border:1px solid #bbb; z-index:5; border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+.personMinus {width:34px; height:34px; position:absolute; top:0; right:0; border:1px solid #bbb; z-index:5; border-top-right-radius: 8px; border-bottom-right-radius: 8px;}
+
+.personPlus span {display:inline-block; font-size:26px; line-height:16px;}
+.personMinus span {display:inline-block; font-size:26px; line-height:16px;}
+
+
+/* 10/27 객실 결제 과정 네비게이션 */
+.stepProcess {padding-top:220px; }
+.process_col {display: block; letter-spacing: 0; max-width:1170px; margin:24px auto 24px; padding:0 20px; text-align: center; }
+.process_col li {position:relative; display: inline-block; padding-right:60px;}
+.process_col li:nth-child(2) > a{color:#ad9e87;}
+.process_col li::before {content:""; position:absolute; right:-4px; top:calc(50% - 1px); width:40px; height:2px; background:#dcdcdc;}
+.process_col li:last-child::before {background:#fff;}
+
+.process_col li a {position:relative; display: block; padding-left:34px; line-height: 40px; font-size:16px; color:#999; font-weight:600;}
+
+.list_first > a::before {content:"1"; position:absolute; left:0; top:calc(50% - 12px); width:24px; height:24px; border-radius: 50%; text-align: center; line-height:22px; border:1px solid #999; font-size:14px; background: #999; color:#fff;}
+
+.list_second > a::before {content:"2"; position:absolute; left:0; top:calc(50% - 12px); width:24px; height:24px; border-radius: 50%; text-align: center; line-height:22px; border:1px solid #ad9e87; font-size:14px; background: #ad9e87; color:#fff;}
+
+.list_third > a::before {content:"3"; position:absolute; left:0; top:calc(50% - 12px); width:24px; height:24px; border-radius: 50%; text-align: center; line-height:22px; border:1px solid #999; font-size:14px; background: #fff; color:#999;}
+
+/* 검색 결과 > 상세검색 */
+.searchList { margin:30px auto 0; border-bottom:1px solid #eee; width:100%; padding:18px 20px; height:72px;}
+.searchListImg {margin:0 auto; max-width:1280px;} 
+.searchListImg > a {display:block; width:120px; height:72px; position:relative; z-index:101;}
+.searchListImg > a > img {float:left;}
+.searchListP {float:left; line-height:37px; margin-left: 20px;}
+
+/* 검색한 객실 */
+.roomList {margin:80px auto 0; position:relative; z-index:100;}
+.record {max-width:1320px; margin:0 auto 70px; height:326px; border-bottom:1px solid #ddd;}
+.record:last-child {border-bottom:0;}
+
+.record > div {float:left;}
+
+.roomImg {width:448px; height:256px;}
+.roomImg img {width:100%; height:100%;}
+
+.room_info {height:256px;  margin-left:40px;}
+
+/* 방 이름 */
+.roomName {margin-top: 30px;}
+.roomName > a {font-size:26px; color:#333; font-weight:600; display:inline-block; position:relative;}
+.roomName > a::after {content:""; position:absolute; right:-30px; top:calc(50% - 6px); width:14px; height:14px; border-top:2px solid #666; border-right:2px solid #666; transform: rotate(45deg);}
+
+/* 방 타입 */
+.rommViewAndPerson {padding-bottom:30px; margin-top:30px;}
+.rommViewAndPerson span {font-size:20px; color:#333; display: inline-block; min-width:160px; margin-left:50px;}
+.rommViewAndPerson span:first-child {border-right:1px solid #ddd; margin:0;}
+.rommViewAndPerson span:nth-child(2) {border-right:1px solid #ddd; width:190px;}
+
+/* 룸 가격 */
+.roomPrice {margin-bottom:20px; font-size:22px; }
+.roomPrice > span {font-weight:500;}
+
+/* 예약 하기 버튼 */
+.room_info > button {float:right; height:46px; font-size:18px; min-width:180px; background:#ad9e87; color:#fff; text-align: center; border:0; cursor: pointer;}
+
+/* 검색 정보없음 */
+.message {color: #999; text-align: center; margin-top: 75px; font-size: 18px;}
+
+/* 디테일 검색 */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  
+  /* 숨기기 */
+  z-index: -1;
+  opacity: 0;
+}
+
+.show { opacity: 1; z-index: 1000; transition: all .5s;}
+
+.window { position: relative; width: 100%; height: 100%;}
+
+.detailSearch { position: absolute; transform: translate(-50%, -50%); background-color: #ffffff; box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3); left:50%; top:50%; z-index:1000; width:700px; height:610px;
+	
+  /* 초기에 약간 아래에 배치 */
+  transform: translate(-50%, -40%);
+ }
+
+.show .popup { transform: translate(-50%, -50%); transition: all .5s;}
+
+
+/* 디테일 검색 */
+.detailSearch {position:relative; padding:61px 0;}
+.detailSearch > header {padding:0 60px; height:60px; line-height:61px; position:absolute; top:0; left:0; width:100%; text-align: center;}
+.detailSearch > header > h2 {font-size:22px; letter-spacing: 0; line-height: inherit;}
+
+.closeButton {position:absolute; top:0; right:0; width:61px; height:61px; line-height:1; border:0; background:#fff; cursor: pointer;}
+.closeButton > i {color:#999; font-size:22px;}
+
+/* 정렬 */
+.detailSerach_sort {padding:30px 40px; border-bottom: 1px solid #eee;}
+.title {font-size:20px; font-weight:600; letter-spacing: 0;}
+
+/* 가격 순 */
+.sortButton {margin-top:20px; height:52px;}
+.price-btn {float:left; position:relative; height:40px;}
+.price-btn:first-child {border-right:0; border-top-left-radius: 10px; border-bottom-left-radius: 10px; margin-bottom:12px; margin-right:0;}
+.price-btn:first-child label { border-top-left-radius: 10px; border-bottom-left-radius:10px;}
+.price-btn:last-child {border-top-right-radius: 10px; border-bottom-right-radius: 10px; margin-bottom:12px; margin-right:12px;}
+.price-btn:last-child label {border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+.price-btn input {position:absolute; top:0; left:0; display: inline-block; width:20px; height:20px; border:0; border-radius: 0; outline: 0; opacity: 0;}
+.price-btn label {border-right: 0; color:#333; font-size:16px; min-width:120px; height:40px; padding:9px 33px; display: inline-block; transition: background-color .2s ease-out; cursor: pointer; border:1px solid #dcdcdc; color:#999;}
+
+/* 뷰 타입, 침대 타입 */
+.column {padding:30px 40px; border-bottom:1px solid #eee;}
+
+.view-btn-area, .room-btn-area {position:relative; margin-top:10px; padding-right:70px;}
+.view-btn, .room-btn {margin-bottom:12px; margin-right:12px; position:relative; display:inline-block;}
+.view-btn input {position:absolute; top:0; left:0; display: inline-block; width:20px; height:20px; border:0; border-radius: 0; outline: 0; margin:4px 0 0; opacity: 0;}
+.view-btn label {min-width:62px; padding:6px 15px; font-size:16px; color:#333; border:1px solid #ad9e87; border-radius: 25px; cursor: pointer; text-align: center; transition-timing-function: ease-out; transition-duration: .2s; transition-property: border-color,background-color,color,opacity;}
+.room-btn input {position:absolute; top:0; left:0; display: inline-block; width:20px; height:20px; border:0; border-radius: 0; outline: 0; margin:4px 0 0; opacity: 0;}
+.room-btn label {min-width:62px; padding:6px 15px; font-size:16px; color:#333; border:1px solid #ad9e87; border-radius: 25px; cursor: pointer; text-align: center; transition-timing-function: ease-out; transition-duration: .2s; transition-property: border-color,background-color,color,opacity;}
+
+.view-btn label:hover {background-color: #eee7e0;}
+.room-btn label:hover {background-color: #eee7e0;}
+
+/* 초기화, 적용 버튼 */
+.detailSerach-modal-foot {width:100%; padding:26px 40px; border-top:1px solid #eee; text-align: right;}
+.detailSerach-modal-foot button {display: inline-block; min-width:152px; padding:10px 20px; border:1px solid #999 !important; text-align: center;}
+.reset-btn {background:#fff;}
+.reset-btn > span {color:#999; display: block; font-size:18px; word-break: break-all;}
+.confirm-btn {background:#333;}
+.confirm-btn > span {color:#fff; display: block; font-size:18px; word-break: break-all;}
