@@ -59,5 +59,6 @@
 			<span>예약 취소</span>
 		</button>
 	</div>
+
 </body>
 </html>
