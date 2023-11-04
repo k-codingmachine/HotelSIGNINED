@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-
 <script type="text/javascript">
 		if(window.name == 'delete'){
 		window.opener.parent.location.href=
