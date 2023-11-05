@@ -27,7 +27,6 @@
    <div id="wrap">
       <div class="header">
          <a href="index.jsp"><img src="hotel_logo.png" alt="호텔로고사진"></a>
-
          <nav>
             <ul>
                <li class="sertchClick"><a href="">객실예약</a></li>
