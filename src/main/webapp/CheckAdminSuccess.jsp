@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<script type="text/javascript">
 	if (window.name == "admin"){
 		if(${replyCheck} == 1){
