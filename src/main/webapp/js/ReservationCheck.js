@@ -11,7 +11,6 @@ function ReservationCheck() {
 	return true;
 }
 
-
 function ReservationValue() {
 
 
